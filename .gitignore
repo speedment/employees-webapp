@@ -1,0 +1,8 @@
+
+\.idea/
+
+*.iml
+
+target/
+
+src/main/java/com/company/

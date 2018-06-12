@@ -1,0 +1,785 @@
+{
+  "config" : {
+    "speedmentVersion" : "Speedment:1.2.0",
+    "nameProtected" : false,
+    "expanded" : true,
+    "appId" : "3c9fc990-4cbe-46a2-812d-53b2223da19e",
+    "companyName" : "company",
+    "name" : "employees",
+    "packageLocation" : "src/main/java/",
+    "id" : "employees",
+    "dbmses" : [
+      {
+        "expanded" : true,
+        "port" : 3306,
+        "schemas" : [
+          {
+            "tables" : [
+              {
+                "expanded" : true,
+                "indexes" : [
+                  {
+                    "nameProtected" : true,
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "dept_name",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "dept_name",
+                        "id" : "dept_name",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "dept_name",
+                    "enabled" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "dept_no",
+                        "id" : "dept_no",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "enumConstants" : "d001,d002,d003,d004,d005,d006,d007,d008,d009",
+                    "name" : "dept_no",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "dept_no",
+                    "hashIndex" : false
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 2,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "name" : "dept_name",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "dept_name",
+                    "hashIndex" : false
+                  }
+                ],
+                "name" : "departments",
+                "id" : "departments",
+                "enabled" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "employees",
+                        "foreignSchemaName" : "employees",
+                        "expanded" : true,
+                        "name" : "dept_no",
+                        "foreignColumnName" : "dept_no",
+                        "id" : "dept_no",
+                        "foreignTableName" : "departments",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "dept_emp_ibfk_2",
+                    "id" : "dept_emp_ibfk_2",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "employees",
+                        "foreignSchemaName" : "employees",
+                        "expanded" : true,
+                        "name" : "emp_no",
+                        "foreignColumnName" : "emp_no",
+                        "id" : "emp_no",
+                        "foreignTableName" : "employees",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "dept_emp_ibfk_1",
+                    "id" : "dept_emp_ibfk_1",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : true,
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "emp_no",
+                        "id" : "emp_no",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "dept_no",
+                        "id" : "dept_no",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "dept_no",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "dept_no",
+                        "id" : "dept_no",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "dept_no",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "emp_no",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "emp_no",
+                    "hashIndex" : false
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 2,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "enumConstants" : "d009",
+                    "name" : "dept_no",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "dept_no",
+                    "hashIndex" : false
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 3,
+                    "enabled" : true,
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "name" : "from_date",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "from_date",
+                    "hashIndex" : false
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "to_date",
+                    "id" : "to_date",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "dept_emp",
+                "id" : "dept_emp",
+                "enabled" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "employees",
+                        "foreignSchemaName" : "employees",
+                        "expanded" : true,
+                        "name" : "dept_no",
+                        "foreignColumnName" : "dept_no",
+                        "id" : "dept_no",
+                        "foreignTableName" : "departments",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "dept_manager_ibfk_2",
+                    "id" : "dept_manager_ibfk_2",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "employees",
+                        "foreignSchemaName" : "employees",
+                        "expanded" : true,
+                        "name" : "emp_no",
+                        "foreignColumnName" : "emp_no",
+                        "id" : "emp_no",
+                        "foreignTableName" : "employees",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "dept_manager_ibfk_1",
+                    "id" : "dept_manager_ibfk_1",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : true,
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "emp_no",
+                        "id" : "emp_no",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "dept_no",
+                        "id" : "dept_no",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "dept_no",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "dept_no",
+                        "id" : "dept_no",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "dept_no",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "emp_no",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "emp_no",
+                    "hashIndex" : false
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 2,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "enumConstants" : "d001,d002,d003,d004,d005,d006,d007,d008,d009",
+                    "name" : "dept_no",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "dept_no",
+                    "hashIndex" : false
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "from_date",
+                    "id" : "from_date",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "to_date",
+                    "id" : "to_date",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "dept_manager",
+                "id" : "dept_manager",
+                "enabled" : true
+              },
+              {
+                "expanded" : true,
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "emp_no",
+                        "id" : "emp_no",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "emp_no",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "emp_no",
+                    "hashIndex" : false
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 2,
+                    "enabled" : true,
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "name" : "birth_date",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "birth_date",
+                    "hashIndex" : false
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "first_name",
+                    "id" : "first_name",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_name",
+                    "id" : "last_name",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 5,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.plugins.enums.StringToEnumTypeMapper",
+                    "enumConstants" : "M,F",
+                    "name" : "gender",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "gender",
+                    "hashIndex" : false
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "hire_date",
+                    "id" : "hire_date",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "employees",
+                "id" : "employees",
+                "enabled" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "employees",
+                        "foreignSchemaName" : "employees",
+                        "expanded" : true,
+                        "name" : "emp_no",
+                        "foreignColumnName" : "emp_no",
+                        "id" : "emp_no",
+                        "foreignTableName" : "employees",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "salaries_ibfk_1",
+                    "id" : "salaries_ibfk_1",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : true,
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "emp_no",
+                        "id" : "emp_no",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "from_date",
+                        "id" : "from_date",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "emp_no",
+                    "id" : "emp_no",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "salary",
+                    "id" : "salary",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "from_date",
+                    "id" : "from_date",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "to_date",
+                    "id" : "to_date",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "salaries",
+                "id" : "salaries",
+                "enabled" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "employees",
+                        "foreignSchemaName" : "employees",
+                        "expanded" : true,
+                        "name" : "emp_no",
+                        "foreignColumnName" : "emp_no",
+                        "id" : "emp_no",
+                        "foreignTableName" : "employees",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "titles_ibfk_1",
+                    "id" : "titles_ibfk_1",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : true,
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "emp_no",
+                        "id" : "emp_no",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "from_date",
+                        "id" : "from_date",
+                        "ordinalPosition" : 3
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "title",
+                        "id" : "title",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "emp_no",
+                    "id" : "emp_no",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "title",
+                    "id" : "title",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "from_date",
+                    "id" : "from_date",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "to_date",
+                    "id" : "to_date",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "titles",
+                "id" : "titles",
+                "enabled" : true
+              },
+              {
+                "expanded" : true,
+                "isView" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "emp_no",
+                    "id" : "emp_no",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "unindexed" : false,
+                    "lowCardinality" : false,
+                    "autoIncrement" : false,
+                    "biDirectional" : false,
+                    "ordinalPosition" : 2,
+                    "enabled" : true,
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "name" : "dept_no",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "dept_no",
+                    "hashIndex" : false
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "from_date",
+                    "id" : "from_date",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "to_date",
+                    "id" : "to_date",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "current_dept_emp",
+                "id" : "current_dept_emp",
+                "enabled" : true
+              },
+              {
+                "expanded" : true,
+                "isView" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "emp_no",
+                    "id" : "emp_no",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "from_date",
+                    "id" : "from_date",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "to_date",
+                    "id" : "to_date",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "dept_emp_latest_date",
+                "id" : "dept_emp_latest_date",
+                "enabled" : true
+              }
+            ],
+            "expanded" : true,
+            "name" : "employees",
+            "id" : "employees",
+            "enabled" : true
+          }
+        ],
+        "typeName" : "MySQL",
+        "ipAddress" : "localhost",
+        "name" : "employees",
+        "id" : "employees",
+        "enabled" : true,
+        "username" : "root"
+      }
+    ],
+    "enabled" : true
+  }
+}
